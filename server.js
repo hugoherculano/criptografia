@@ -24,7 +24,7 @@ app.post("/login", async (request, response) => {
     const senhaCriptografada = "$ddo99sd9aiw82assf389822";
     const senhaVerdadeira = "12345678";
 
-    const senhaVerdadeiraOUFalse = await compare(senhaCriptografada, senhaCriptografada);
+    const senhaVerdadeiraOUFalse = await compare(senhaCriptografada, senhaVerdadeira);
 
     return response.status(201).json({ trueOUfalse: senhaVerdadeiraOUFalse });
 });
